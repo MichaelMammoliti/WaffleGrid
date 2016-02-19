@@ -1,0 +1,297 @@
+$max-cols: 12
+$grids-spacing: 2rem
+
+$name-offset-r: "OR"
+$name-offset-l: "OL"
+
+$name-grids: "grids"
+$name-gutters: "gutters"
+$name-col: "col"
+$name-row: "row"
+$name-clear: "clear"
+
+$name-col-xxs: "xxs"
+$name-col-xs: "xs"
+$name-col-s: "s"
+$name-col-n: "n"
+$name-col-m: "m"
+$name-col-l: "l"
+$name-col-xl: "xl"
+$name-col-xxl: "xxl"
+
+$screen-max-res-xxs: 200px
+$screen-max-res-xs: 400px
+$screen-max-res-s: 600px
+$screen-max-res-n: 800px
+$screen-max-res-m: 1000px
+$screen-max-res-l: 1200px
+$screen-max-res-xl: 1400px
+$screen-max-res-xxl: 1600px
+
+// - utilities' mixins
+=before
+  content: " "
+  display: block
+
+=clearfix
+  &:before, &:after
+    +before
+    clear: both
+
+// - grid' mixins
+=gutters($px: $grids-spacing)
+  >.row
+    margin-right: -$px
+    margin-bottom: -$px
+    >.col
+      padding-right: $px
+      padding-bottom: $px
+
+=col($col-class-name)
+  @for $i from 1 through $max-cols
+    .col
+      &.#{$col-class-name}-#{$i}
+        width: ( (100% * $i) / $max-cols ) !important
+
+=fixed
+  @for $i from 1 through $max-cols
+    .row
+      &.fixed-#{$i}
+        .col
+          width: ( (100% * $i) / $max-cols ) !important
+
+=offset($col-class-name)
+  @for $i from 0 through $max-cols
+    .#{$col-class-name}-#{$name-offset-r}-#{$i}
+      right: (100%/$max-cols) * $i !important
+
+  @for $i from 0 through $max-cols
+    .#{$col-class-name}-#{$name-offset-l}-#{$i}
+      right: -(100%/$max-cols) * $i !important
+
+=clear($col-class-name)
+  .#{$name-clear}
+    &.#{$col-class-name}
+      display: block
+
+=clear-only($col-class-name)
+  .#{$name-clear}
+    &.#{$col-class-name}-only
+      display: block
+
+=clear-under($col-class-name)
+  .#{$name-clear}
+    &.under-#{$col-class-name}
+      display: block
+
+=clear-above($col-class-name)
+  .#{$name-clear}
+    &.above-#{$col-class-name}
+      display: block
+
+=show($col-class-name)
+  .#{$col-class-name}-show
+    visibility: visible !important
+
+=hide($col-class-name)
+  .#{$col-class-name}-hide
+    visibility: hidden !important
+
+=grids($px: $grids-spacing)
+  // gutters
+  &.#{$name-gutters}
+    margin-left: -$px
+    .row
+      &:last-of-type
+        margin-bottom: -$px
+    .col
+      padding: $px 0 0 $px
+      margin-top: -$px
+      margin-bottom: $px
+
+  &.gutters-vertical
+    margin-left: -$px
+    .row
+    .col
+      padding: $px 0 0 $px
+      margin-top: -$px
+
+  // do not touch
+  &.gutters-horizontal
+    .row
+      &:last-of-type
+        margin-bottom: -$px
+    .col
+      padding: $px 0 0 0
+      margin-top: -$px
+      margin-bottom: $px
+
+//  - - - - grids begin
+.#{$name-grids}
+  +fixed
+  +clearfix
+  +grids
+
+  >.#{$name-row}
+    float: left
+    width: 100%
+
+    >.#{$name-col}
+      width: 100%
+      float: left
+      position: relative
+
+  // clear
+  .#{$name-clear}
+    display: none
+    clear: both !important
+    width: 100% !important
+    overflow: hidden !important
+
+  .show
+    visibility: visible
+  .hide
+    visibility: hidden
+
+
+.clear
+  &.always
+    display: block !important
+
+
+@media (min-width: 0)
+  +col(#{$name-col-xxs})
+  +clear(#{$name-col-xxs})
+
+@media (min-width: $screen-max-res-xs)
+  +col(#{$name-col-xs})
+  +clear(#{$name-col-xs})
+
+@media (min-width: $screen-max-res-s)
+  +col(#{$name-col-s})
+  +clear(#{$name-col-s})
+
+@media (min-width: $screen-max-res-n)
+  +col(#{$name-col-n})
+  +clear(#{$name-col-n})
+
+@media (min-width: $screen-max-res-m)
+  +col(#{$name-col-m})
+  +clear(#{$name-col-m})
+
+@media (min-width: $screen-max-res-l)
+  +col(#{$name-col-l})
+  +clear(#{$name-col-l})
+
+@media (min-width: $screen-max-res-xl)
+  +col(#{$name-col-xl})
+  +clear(#{$name-col-xl})
+
+@media (min-width: $screen-max-res-xxl)
+  +col(#{$name-col-xxl})
+  +clear(#{$name-col-xxl})
+
+
+
+// from gutter to gutter
+@media (min-width: 0) and (max-width: $screen-max-res-xs)
+  +offset(#{$name-col-xxs})
+  +show(#{$name-col-xxs})
+  +hide(#{$name-col-xxs})
+  +clear-only(#{$name-col-xxs})
+
+@media (min-width: $screen-max-res-xs) and (max-width: $screen-max-res-s)
+  +offset(#{$name-col-xs})
+  +show(#{$name-col-xs})
+  +hide(#{$name-col-xs})
+  +clear-only(#{$name-col-xs})
+
+@media (min-width: $screen-max-res-s) and (max-width: $screen-max-res-n)
+  +offset(#{$name-col-s})
+  +show(#{$name-col-s})
+  +hide(#{$name-col-s})
+  +clear-only(#{$name-col-s})
+
+@media (min-width: $screen-max-res-n) and (max-width: $screen-max-res-m)
+  +offset(#{$name-col-n})
+  +show(#{$name-col-n})
+  +hide(#{$name-col-n})
+  +clear-only(#{$name-col-n})
+
+@media (min-width: $screen-max-res-m) and (max-width: $screen-max-res-l)
+  +offset(#{$name-col-m})
+  +show(#{$name-col-m})
+  +hide(#{$name-col-m})
+  +clear-only(#{$name-col-m})
+
+@media (min-width: $screen-max-res-l) and (max-width: $screen-max-res-xl)
+  +offset(#{$name-col-l})
+  +show(#{$name-col-l})
+  +hide(#{$name-col-l})
+  +clear-only(#{$name-col-l})
+
+@media (min-width: $screen-max-res-xl) and (max-width: $screen-max-res-xxl)
+  +offset(#{$name-col-xl})
+  +show(#{$name-col-xl})
+  +hide(#{$name-col-xl})
+  +clear-only(#{$name-col-xl})
+
+@media (min-width: $screen-max-res-xxl)
+  +offset(#{$name-col-xxl})
+  +show(#{$name-col-xxl})
+  +hide(#{$name-col-xxl})
+  +clear-only(#{$name-col-xxl})
+
+
+
+// from 0 to gutter
+@media (max-width: $screen-max-res-xxs)
+  +clear-under(#{$name-col-xxs})
+
+@media (max-width: $screen-max-res-xs)
+  +clear-under(#{$name-col-xs})
+
+@media (max-width: $screen-max-res-s)
+  +clear-under(#{$name-col-s})
+
+@media (max-width: $screen-max-res-n)
+  +clear-under(#{$name-col-n})
+
+@media (max-width: $screen-max-res-m)
+  +clear-under(#{$name-col-m})
+
+@media (max-width: $screen-max-res-l)
+  +clear-under(#{$name-col-l})
+
+@media (max-width: $screen-max-res-xl)
+  +clear-under(#{$name-col-xl})
+
+@media (max-width: $screen-max-res-xxl)
+  +clear-under(#{$name-col-xxl})
+
+
+
+// from 0 to gutter
+@media (min-width: $screen-max-res-xxs)
+  +clear-above(#{$name-col-xxs})
+
+@media (min-width: $screen-max-res-xs)
+  +clear-above(#{$name-col-xs})
+
+@media (min-width: $screen-max-res-s)
+  +clear-above(#{$name-col-s})
+
+@media (min-width: $screen-max-res-n)
+  +clear-above(#{$name-col-n})
+
+@media (min-width: $screen-max-res-m)
+  +clear-above(#{$name-col-m})
+
+@media (min-width: $screen-max-res-l)
+  +clear-above(#{$name-col-l})
+
+@media (min-width: $screen-max-res-xl)
+  +clear-above(#{$name-col-xl})
+
+@media (min-width: $screen-max-res-xxl)
+  +clear-above(#{$name-col-xxl})
