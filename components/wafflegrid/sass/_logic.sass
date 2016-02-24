@@ -1,0 +1,133 @@
+// Gutters
+// ========================
+=gutters($px: $grids-spacing)
+  >.#{$name-row}
+    margin-right: -$px
+    margin-bottom: -$px
+    >.#{$name-col}
+      padding-right: $px
+      padding-bottom: $px
+
+
+// Columns
+// ========================
+=cols($col-class-name)
+  @for $i from 1 through $max-cols
+    .#{$name-col}
+      &.#{$col-class-name}-#{$i}
+        width: ( (100% * $i) / $max-cols ) !important
+
+// .row class for default columns width
+// ========================
+=default-cols
+  @for $i from 1 through $max-cols
+    >.#{$name-row}
+      &.#{$name-default}-#{$i}
+        >.#{$name-col}
+          width: ( (100% * $i) / $max-cols ) !important
+
+
+// Grid maker
+// ========================
+=grids($px: $grids-spacing)
+  // gutters
+
+  &.#{$name-gutters}
+    margin-left: -$px
+    >.#{$name-row}
+      &:last-of-type
+        margin-bottom: -$px
+      >.#{$name-col}
+        margin-bottom: $px
+        padding-left: $px
+
+  &.gutters-vertical
+    margin-left: -$px
+    >.#{$name-row}
+      &:last-of-type
+      >.#{$name-col}
+        padding-left: $px
+
+  &.gutters-horizontal
+    >.#{$name-row}
+      &:last-of-type
+        margin-bottom: -$px
+      >.#{$name-col}
+        margin-bottom: $px
+
+
+// Offstet
+// ========================
+=offset($col-class-name)
+  @for $i from 0 through $max-cols
+    .#{$col-class-name}-#{$name-offset-r}-#{$i}
+      right: (100%/$max-cols) * $i !important
+
+  @for $i from 0 through $max-cols
+    .#{$col-class-name}-#{$name-offset-l}-#{$i}
+      right: -(100%/$max-cols) * $i !important
+
+
+// Clear
+// ========================
+=clear($col-class-name)
+  .#{$name-clear}
+    &.#{$col-class-name}
+      display: block
+
+=clear($col-class-name)
+  .#{$name-clear}
+    &.#{$col-class-name}
+      display: block
+
+=clear-under($col-class-name)
+  .#{$name-clear}
+    &.under-#{$col-class-name}
+      display: block
+
+=clear-above($col-class-name)
+  .#{$name-clear}
+    &.above-#{$col-class-name}
+      display: block
+
+
+// Show/hide
+// ========================
+=show($col-class-name)
+  .#{$col-class-name}-show
+    visibility: visible !important
+
+=hide($col-class-name)
+  .#{$col-class-name}-hide
+    visibility: hidden !important
+
+
+// Create css
+// ========================
+.#{$name-grids}
+  +clearfix
+  +grids
+  +default-cols
+  box-sizing: border-box
+
+  .#{$name-row}, .#{$name-col}
+    box-sizing: border-box
+    float: left
+    width: 100%
+    position: relative
+
+  >.#{$name-row}
+    +cols(#{$name-col-d})
+    >.#{$name-col}
+      &.show
+        visibility: visible
+      &.hide
+        visibility: hidden
+
+  .#{$name-clear}
+    display: none
+    clear: both !important
+    width: 100% !important
+    overflow: hidden !important
+    &.always
+      display: block !important

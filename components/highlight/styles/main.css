@@ -1,0 +1,95 @@
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  color: #777;
+  padding: 20px;
+}
+
+/* "<" char */
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-tag {
+  color: inherit;
+}
+
+.hljs.lang-css .hljs-selector-tag,
+.hljs.lang-css .hljs-selector-attr
+{
+  color: #8CB9D1;
+}
+
+.hljs-template-tag {
+  color: #8cd0d3;
+}
+
+.hljs-number {
+  color: #8cd0d3;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-attr{
+  color: #7ECCAD;
+}
+
+.hljs-selector-attr {
+  color: inherit;
+}
+
+.hljs-literal {
+  color: #efefaf;
+}
+
+.hljs-subst {
+  color: #8f8f8f;
+}
+
+.hljs-title,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-section,
+.hljs-type {
+  color: #8CB9D1;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link {
+  color: #dca3a3;
+}
+
+.hljs-deletion,
+.hljs-string,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #FFB77C;
+}
+
+.hljs-addition,
+.hljs-comment,
+.hljs-quote,
+.hljs-meta {
+  color: #BDBDBD;
+}
+
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
