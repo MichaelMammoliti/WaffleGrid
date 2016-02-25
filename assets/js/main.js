@@ -9,8 +9,6 @@ String.prototype.escape = function() {
     });
 };
 
-
-
 (function(){
   var $spans = $(".block").find("span");
 
