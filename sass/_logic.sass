@@ -1,0 +1,29 @@
+// Create css
+// ========================
+.#{$name-grids}
+  +clearfix
+  +grid
+  +default-cols
+  box-sizing: border-box
+
+  .#{$name-row}, .#{$name-col}
+    box-sizing: border-box
+    float: left
+    width: 100%
+    position: relative
+
+  >.#{$name-row}
+    +cols(#{$name-col-d})
+    >.#{$name-col}
+      &.show
+        visibility: visible
+      &.hide
+        visibility: hidden
+
+  .#{$name-clear}
+    display: none
+    clear: both !important
+    width: 100% !important
+    overflow: hidden !important
+    &.always
+      display: block !important
