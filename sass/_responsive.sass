@@ -1,4 +1,5 @@
-// from gutter to gutter
+// From gutter to gutter
+// ========================
 @media (min-width: 0) and (max-width: $screen-max-res-xs)
   +offset(#{$name-col-xxs})
   +show(#{$name-col-xxs})
@@ -47,44 +48,64 @@
   +hide(#{$name-col-xxl})
   +clear(#{$name-col-xxl})
 
+
+// From gutter to 100%
+// ========================
 @media (min-width: 0)
   +cols(#{$name-col-xxs})
   +clear-above(#{$name-col-xxs})
+
 @media (min-width: $screen-max-res-xs)
   +cols(#{$name-col-xs})
   +clear-above(#{$name-col-xs})
+
 @media (min-width: $screen-max-res-s)
   +cols(#{$name-col-s})
   +clear-above(#{$name-col-s})
+
 @media (min-width: $screen-max-res-n)
   +cols(#{$name-col-n})
   +clear-above(#{$name-col-n})
+
 @media (min-width: $screen-max-res-m)
   +cols(#{$name-col-m})
   +clear-above(#{$name-col-m})
+
 @media (min-width: $screen-max-res-l)
   +cols(#{$name-col-l})
   +clear-above(#{$name-col-l})
+
 @media (min-width: $screen-max-res-xl)
   +cols(#{$name-col-xl})
   +clear-above(#{$name-col-xl})
+
 @media (min-width: $screen-max-res-xxl)
   +cols(#{$name-col-xxl})
   +clear-above(#{$name-col-xxl})
 
+
+// From 0 to gutter
+// ========================
 @media (max-width: $screen-max-res-xxs)
   +clear-under(#{$name-col-xxs})
+
 @media (max-width: $screen-max-res-xs)
   +clear-under(#{$name-col-xs})
+
 @media (max-width: $screen-max-res-s)
   +clear-under(#{$name-col-s})
+
 @media (max-width: $screen-max-res-n)
   +clear-under(#{$name-col-n})
+
 @media (max-width: $screen-max-res-m)
   +clear-under(#{$name-col-m})
+
 @media (max-width: $screen-max-res-l)
   +clear-under(#{$name-col-l})
+
 @media (max-width: $screen-max-res-xl)
   +clear-under(#{$name-col-xl})
+
 @media (max-width: $screen-max-res-xxl)
   +clear-under(#{$name-col-xxl})
