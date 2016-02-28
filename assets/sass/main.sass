@@ -155,9 +155,16 @@ footer
 // Sections
 // ====================
 .section
+  .section--main
+    >section
+      margin-top: $spacing
+      &:first-of-type
+        margin-top: 0
+    .padding
+      padding-bottom: $spacing*2
   .section--header
     .padding
-      padding-bottom: 0 !important
+      padding: $spacing*2 $spacing
   .section--bg-image
   .section--bg-color
 
@@ -172,7 +179,7 @@ footer
 // typography
 // ====================
 h1
-  font-size: 2rem
+  font-size: 2.5rem
   letter-spacing: 3px
 h2
   font-size: 1.4rem
@@ -234,24 +241,28 @@ main
     border-bottom: 1px solid #ddd
     &:last-of-type
       border-bottom: 0
-    .padding
-      padding: $spacing*2 $spacing
-section
-  h1
-    margin-bottom: $spacing*2
-    color: $color
-    text-align: left
-    width: 100%
-    display: block
-    text-transform: uppercase
-  h2
-    margin-bottom: $spacing/2
-    color: #444
-  >h2
-    margin-top: $spacing
-  h4
-    margin-top: $spacing
-    margin-bottom: $spacing/4
+  section
+    h1
+      color: $color
+      text-align: left
+      width: 100%
+      display: block
+      text-transform: uppercase
+    h2
+      color: #666
+      display: inline-block
+      padding: $spacing/2
+      margin-top: $spacing*2
+      margin-bottom: $spacing
+      color: #fff
+      border-left: 5px solid #aaa
+      color: #aaa
+      &:first-of-type
+        margin-top: 0
+
+    h4
+      margin-top: $spacing
+      margin-bottom: $spacing/4
 
 
 #resume
@@ -344,6 +355,7 @@ section
 
 #some-magic
   .nav
+    margin-top: $spacing
     li
       margin: 0 5px 5px 0
 
@@ -358,11 +370,6 @@ section
     margin: $spacing/2 0
   h4
     margin-top: 0
-
-#APIs
-  h2
-    margin-top: $spacing
-
 
 pre
   font-family: monospace !important

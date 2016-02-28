@@ -48,11 +48,14 @@ footer .copyright p { text-align: center; padding: 1rem 2rem; background: #fff; 
 
 .custom-container { max-width: 700px; float: right; width: 100%; }
 
-.section .section--header .padding { padding-bottom: 0 !important; }
+.section .section--main > section { margin-top: 2rem; }
+.section .section--main > section:first-of-type { margin-top: 0; }
+.section .section--main .padding { padding-bottom: 4rem; }
+.section .section--header .padding { padding: 4rem 2rem; }
 
 .col-content { border: 1px solid #ddd; padding: 2rem; background: #fff; }
 
-h1 { font-size: 2rem; letter-spacing: 3px; }
+h1 { font-size: 2.5rem; letter-spacing: 3px; }
 
 h2 { font-size: 1.4rem; font-weight: 400; }
 
@@ -74,12 +77,10 @@ h4 { font-weight: 600; text-transform: uppercase; color: #666; font-size: 1rem; 
 
 main > section { border-bottom: 1px solid #ddd; }
 main > section:last-of-type { border-bottom: 0; }
-main > section .padding { padding: 4rem 2rem; }
-
-section h1 { margin-bottom: 4rem; color: #FFB77C; text-align: left; width: 100%; display: block; text-transform: uppercase; }
-section h2 { margin-bottom: 1rem; color: #444; }
-section > h2 { margin-top: 2rem; }
-section h4 { margin-top: 2rem; margin-bottom: 0.5rem; }
+main section h1 { color: #FFB77C; text-align: left; width: 100%; display: block; text-transform: uppercase; }
+main section h2 { color: #666; display: inline-block; padding: 1rem; margin-top: 4rem; margin-bottom: 2rem; color: #fff; border-left: 5px solid #aaa; color: #aaa; }
+main section h2:first-of-type { margin-top: 0; }
+main section h4 { margin-top: 2rem; margin-bottom: 0.5rem; }
 
 #resume h2 { font-size: 1.1rem; color: #000; }
 #resume p { margin-bottom: 2rem; }
@@ -105,14 +106,13 @@ section h4 { margin-top: 2rem; margin-bottom: 0.5rem; }
 
 #order .block { color: #fff; }
 
+#some-magic .nav { margin-top: 2rem; }
 #some-magic .nav li { margin: 0 5px 5px 0; }
 
 #clear .clear { height: 2px; background: #aaa; }
 
 #why p { margin: 1rem 0; }
 #why h4 { margin-top: 0; }
-
-#APIs h2 { margin-top: 2rem; }
 
 pre { font-family: monospace !important; }
 pre * { font-family: monospace !important; }

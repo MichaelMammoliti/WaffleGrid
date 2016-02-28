@@ -1,16 +1,41 @@
 <html>
   <head>
-    <title>WaffleGrid - Where design matter.</title>
-    <meta name='description' content=''>
-    <meta name='keywords' content=''>
-    <meta name='og:description' content=''>
-    <meta name='og:keywords' content=''>
+    <title>WaffleGrid - Where design matters.</title>
+    <meta name='description' content="WaffleGrids is a light, powerful, CSS only and easy to use grid system for your next websites.">
+    <meta name='keywords' content='wafflegrid, css only, grid system'>
+
+    <meta name='og:title' content='WaffleGrid - Where design matters'>
+    <meta name='og:description' content='WaffleGrids is a light, powerful, CSS only and easy to use grid system for your next websites."'>
+    <meta name='og:image' content='http://www.michaelmammoliti.github.io/wafflegrid/assets/img/wafflegrid-og-image.jpg'>
+
     <meta charset='utf-8'/>
+
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' type='text/css' href='components/wafflegrid/css/wafflegrid.css'>
-    <link rel='stylesheet' type='text/css' href='assets/css/main.css'>
+
     <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' >
-    <link rel='stylesheet' type='text/css' href='components/highlight/styles/main.css' >
+    <link rel='stylesheet' type='text/css' href='assets/css/main.min.css'>
+    <link rel='stylesheet' type='text/css' href='components/wafflegrid/css/wafflegrid.min.css'>
+    <link rel='stylesheet' type='text/css' href='components/highlight/styles/main.css'>
+
+    <link rel='apple-touch-icon' sizes='57x57' href='assets/img/apple-touch-icon-57x57.png'>
+    <link rel='apple-touch-icon' sizes='60x60' href='assets/img/apple-touch-icon-60x60.png'>
+    <link rel='apple-touch-icon' sizes='72x72' href='assets/img/apple-touch-icon-72x72.png'>
+    <link rel='apple-touch-icon' sizes='76x76' href='assets/img/apple-touch-icon-76x76.png'>
+    <link rel='apple-touch-icon' sizes='114x114' href='assets/img/apple-touch-icon-114x114.png'>
+    <link rel='apple-touch-icon' sizes='120x120' href='assets/img/apple-touch-icon-120x120.png'>
+    <link rel='apple-touch-icon' sizes='144x144' href='assets/img/apple-touch-icon-144x144.png'>
+    <link rel='apple-touch-icon' sizes='152x152' href='assets/img/apple-touch-icon-152x152.png'>
+    <link rel='apple-touch-icon' sizes='180x180' href='assets/img/apple-touch-icon-180x180.png'>
+    <link rel='icon' type='image/png' href='assets/img/favicon-32x32.png' sizes='32x32'>
+    <link rel='icon' type='image/png' href='assets/img/android-chrome-192x192.png' sizes='192x192'>
+    <link rel='icon' type='image/png' href='assets/img/favicon-96x96.png' sizes='96x96'>
+    <link rel='icon' type='image/png' href='assets/img/favicon-16x16.png' sizes='16x16'>
+    <link rel='manifest' href='/manifest.json'>
+    <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5'>
+    <meta name='msapplication-TileColor' content='#da532c'>
+    <meta name='msapplication-TileImage' content='/mstile-144x144.png'>
+    <meta name='theme-color' content='#ffffff'>
+
   </head>
   <body>
 
@@ -18,8 +43,8 @@
 
       <div id='top'>
         <div class='container padding clearfix'>
-          <div id='logo'><img src='assets/img/logo-waffle-w.png' /></div>
-          <div id='download-btn'><a href='https://github.com/MichaelMammoliti/wafflegrid' target='_blank'  class='btn btn-white round stroke'>DOWNLOAD</a></div>
+          <div id='logo'><img src='assets/img/wafflegrid-logo-w.png' /></div>
+          <div id='download-btn'><a href='https://github.com/MichaelMammoliti/waffle-grid' target='_blank'  class='btn btn-white round stroke'>DOWNLOAD</a></div>
         </div>
       </div>
 
@@ -37,6 +62,7 @@
             <a href='#why'>WHY</a>
             <a href='#some-magic'>SOME MAGIC</a>
             <a href='#APIs'>APIs</a>
+            <a href='#use'>USE</a>
           </nav>
         </div>
       </div>
@@ -46,65 +72,72 @@
     <main>
 
       <!-- Why -->
-      <section id='why'>
-        <div class='container padding'>
+      <section id='why' class='section'>
 
-          <h1>Why you will waffle</h1>
+        <div class='section--header'>
+          <div class='container padding'>
+            <h1>Why you will waffle</h1>
+          </div>
+        </div>
 
-          <div class='grid gutters'>
-            <div class='row'>
+        <div class='section--main'>
+          <div class='container padding'>
 
-              <div class='col s-6 n-4 l-3'>
-                <h4>EASY BUT POWERFUL</h4>
-                <p>Clean and super easy syntax.<br>Clear where you want, order columns, real and precise px gutters, same with columns, a lot of @media limits, nesting grid.</p>
+
+            <div class='grid gutters'>
+              <div class='row'>
+
+                <div class='col s-6 n-4 l-3'>
+                  <h4>EASY BUT POWERFUL</h4>
+                  <p>Clean and super easy syntax.<br>Clear where you want, order columns, real and precise px gutters, same with columns, a lot of @media limits, nesting grid.</p>
+                </div>
+                <div class='col s-6 n-4 l-3'>
+                  <h4>Fluid & Responsive</h4>
+                  <p>Ulinke some frameworks, WaffleGrid is thought to be fluid, with no container.<br>This means that you can set your own container and make your own responsive design.<br></p>
+                </div>
+                <div class='clear under-s'></div>
+                <div class='col s-6 n-4 l-3'>
+                  <h4>MOBILE? OF COURSE.</h4>
+                  <p>Don't worry about screen sizes anymore. WaffleGrid adapts itself to all devices by default.</p>
+                </div>
+                <div class='clear n m'></div>
+                <div class='col s-6 n-4 l-3'>
+                  <h4>HIGHLY CUSTOMIZABLE</h4>
+                  <p>Using Sass you can easily choose your units, set private grid gutters, change the class naming and personalize @media sizes.</p>
+                </div>
+
+                <div class='clear above-l'></div>
+
+                <div class='col s-6 n-4 l-3'>
+                  <h4>ROWS? NO, COLUMNS.</h4>
+                  <p>Avoid using rows for multiple columns unless you really need them.<br>Put your content inside a column and set its size. It works great like it should and you have much more control indeed.</p>
+                </div>
+
+                <div class='col s-6 n-4 l-3'>
+                  <h4>COMPATIBILITY</h4>
+                  <p>Since IE8 is not supported anymore, WaffleGrid works on IE9+ and all major browsers.</p>
+                </div>
+
+                <div class='clear under-l'></div>
+
+                <div class='col s-6 n-4 l-3'>
+                  <h4>ONLY WHAT YOU NEED</h4>
+                  <p>14KB minified. No fancy helper classes, ony the grid system; which is might be what you are looking for.</p>
+                </div>
+
+                <div class='col s-6 n-4 l-3'>
+                  <h4>SASS PREPROCESSOR</h4>
+                  <p>WaffleGrid is made using Sass. You can choose the developer version or the minified .css.</p>
+                </div>
+
               </div>
-              <div class='col s-6 n-4 l-3'>
-                <h4>Fluid & Responsive</h4>
-                <p>Ulinke some frameworks, WaffleGrid is thought to be fluid, with no container.<br>This means that you can set your own container and make your own responsive design.<br></p>
-              </div>
-              <div class='clear under-s'></div>
-              <div class='col s-6 n-4 l-3'>
-                <h4>MOBILE? OF COURSE.</h4>
-                <p>Don't worry about screen sizes anymore. WaffleGrid adapts itself to all devices by default.</p>
-              </div>
-              <div class='clear n m'></div>
-              <div class='col s-6 n-4 l-3'>
-                <h4>HIGHLY CUSTOMIZABLE</h4>
-                <p>Using Sass you can easily choose your units, set private grid gutters, change the class naming and personalize @media sizes.</p>
-              </div>
-
-              <div class='clear above-l'></div>
-
-              <div class='col s-6 n-4 l-3'>
-                <h4>ROWS? NO, COLUMNS.</h4>
-                <p>Avoid using rows for multiple columns unless you really need them.<br>Put your content inside a column and set its size. It works great like it should and you have much more control indeed.</p>
-              </div>
-
-              <div class='col s-6 n-4 l-3'>
-                <h4>COMPATIBILITY</h4>
-                <p>Since IE8 is not supported anymore, WaffleGrid works on IE9+ and all major browsers.</p>
-              </div>
-
-              <div class='clear under-l'></div>
-
-              <div class='col s-6 n-4 l-3'>
-                <h4>ONLY WHAT YOU NEED</h4>
-                <p>17KB minified. No fancy helper classes, ony the grid system; which is might be what you are looking for.</p>
-              </div>
-
-              <div class='col s-6 n-4 l-3'>
-                <h4>SASS PREPROCESSOR</h4>
-                <p>WaffleGrid is made using Sass. You can choose the developer version or the minified .css.</p>
-              </div>
-
             </div>
           </div>
-
         </div>
       </section>
 
-      <!-- Gutters -->
-      <section id='some-magic'>
+      <!-- Some Magic -->
+      <section id='some-magic' class='section'>
 
         <div class='section--header'>
           <div class='container padding'>
@@ -124,6 +157,7 @@
 
         <div class='section--main'>
 
+          <!-- Gutters -->
           <section id='gutters'>
             <div class='container padding'>
               <h2>Gutters</h2>
@@ -418,455 +452,451 @@
               </section>
             </div>
           </section>
-        </div>
-      </section>
 
-      <!-- Column width -->
-      <section id='columns'>
-        <div class='container padding'>
-          <h2>Columns</h2>
+          <!-- Column width -->
+          <section id='columns'>
+            <div class='container padding'>
+              <h2>Columns</h2>
 
-          <section>
-            <h4>Default width.</h4>
-            <div class='grid'>
+              <section>
+                <h4>Default width.</h4>
+                <div class='grid'>
 
-              <div class='row d-1'>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-              </div>
+                  <div class='row d-1'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
 
-              <div class='row d-2'>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-              </div>
+                  <div class='row d-2'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
 
-              <div class='row d-3'>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-              </div>
+                  <div class='row d-3'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
 
-              <div class='row d-4'>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-              </div>
+                  <div class='row d-4'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
 
-              <div class='row d-6'>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-                <div class="col">
-                  <div class="block"><span></span></div>
-                </div>
-              </div>
+                  <div class='row d-6'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
 
-              <div class='row d-12'>
-                <div class="col">
-                  <div class="block"><span></span></div>
+                  <div class='row d-12'>
+                    <div class="col">
+                      <div class="block"><span></span></div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </section>
+
+              <section>
+                <h4>Responsive width.</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
+                    <div class='col xxs-3 s-4 l-1'><div class='block'><span></span></div></div>
+                    <div class='col xxs-9 s-6 l-2'><div class='block'><span></span></div></div>
+                    <div class='col xxs-8 s-2 l-3'><div class='block'><span></span></div></div>
+                    <div class='col xxs-4 s-2 l-3'><div class='block'><span></span></div></div>
+                    <div class='col xxs-6 s-3 l-1'><div class='block'><span></span></div></div>
+                    <div class='col xxs-6 s-7 l-2'><div class='block'><span></span></div></div>
+                  </div>
+                </div>
+              </section>
+
+              <section id='order'>
+                <h4>Order.</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
+
+                    <div class='col xxs-4 s-2 l-7 xxs-OL-8 n-OL-8 l-OL-5'><div class='block red'>1<span></span></div></div>
+                    <div class='col xxs-4 s-2 l-5 xxs-OR-4 n-OL-4 l-OR-7'><div class='block yellow'>2<span></span></div></div>
+
+                    <div class='col xxs-4 s-2 l-5 xxs-OR-4 n-OL-6'><div class='block blue'>3<span></span></div></div>
+                    <div class='col xxs-12 s-6 l-3 n-OR-6'><div class='block green'>4<span></span></div></div>
+                    <div class='col xxs-6 s-12 l-4'><div class='block orange'>5<span></span></div></div>
+
+                    <div class='col xxs-6 s-4 l-3 n-OL-8'><div class='block gray'>6<span></span></div></div>
+                    <div class='col xxs-12 s-4 l-3 n-OR-1'><div class='block pink'>7<span></span></div></div>
+                    <div class='col xxs-12 s-1 l-3 n-OR-1'><div class='block purple'>8<span></span></div></div>
+                    <div class='col xxs-6 s-1 l-3 n-OR-7'><div class='block'>9<span></span></div></div>
+                    <div class='col xxs-6 s-2 l-3 n-OR-10'><div class='block black'>10<span></span></div></div>
+                    <div class='col l-9'><div class='block cyan'>11<span></span></div></div>
+
+                  </div>
+                </div>
+              </section>
             </div>
           </section>
 
-          <section>
-            <h4>Responsive width.</h4>
-            <div class='grid gutters'>
-              <div class='row'>
-                <div class='col xxs-3 s-4 l-1'><div class='block'><span></span></div></div>
-                <div class='col xxs-9 s-6 l-2'><div class='block'><span></span></div></div>
-                <div class='col xxs-8 s-2 l-3'><div class='block'><span></span></div></div>
-                <div class='col xxs-4 s-2 l-3'><div class='block'><span></span></div></div>
-                <div class='col xxs-6 s-3 l-1'><div class='block'><span></span></div></div>
-                <div class='col xxs-6 s-7 l-2'><div class='block'><span></span></div></div>
-              </div>
+          <!-- Show Hide -->
+          <section id='show-hide'>
+            <div class='container padding'>
+              <h2>Show/Hide</h2>
+
+              <section>
+                <h4>Show. (Resize window)</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
+
+                    <div class="col xxs-12 hide xxl-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 hide xl-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 hide l-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 hide m-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 hide n-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 hide s-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 hide xs-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 hide xxs-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 hide l-show"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 hide s-show"><div class="block"><span></span></div></div>
+
+                  </div>
+                </div>
+              </section>
+
+              <section>
+                <h4>Hide. (Resize window)</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
+
+                    <div class="col xxs-12 xxl-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 xl-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 l-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 m-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 n-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 s-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 xs-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 xxs-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 l-hide"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 s-hide"><div class="block"><span></span></div></div>
+
+                  </div>
+                </div>
+              </section>
+
             </div>
           </section>
 
-          <section id='order'>
-            <h4>Order.</h4>
-            <div class='grid gutters'>
-              <div class='row'>
+          <!-- Clears-->
+          <section id='clear'>
+            <div class='container padding'>
+              <h2>Clear</h2>
 
-                <div class='col xxs-4 s-2 l-7 xxs-OL-8 n-OL-8 l-OL-5'><div class='block red'>1<span></span></div></div>
-                <div class='col xxs-4 s-2 l-5 xxs-OR-4 n-OL-4 l-OR-7'><div class='block yellow'>2<span></span></div></div>
+              <section>
+                <h4>Fixed.</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
+                    <div class="col xxs-2"><div class="block"><span></span></div></div>
+                    <div class="col xxs-2"><div class="block"><span></span></div></div>
+                    <div class='clear xxs'></div>
+                    <div class="col xxs-6"><div class="block"><span></span></div></div>
+                    <div class='clear xxs'></div>
+                    <div class="col xxs-4"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4"><div class="block"><span></span></div></div>
+                    <div class='clear xxs'></div>
+                    <div class="col xxs-4"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3"><div class="block"><span></span></div></div>
+                    <div class='clear xxs'></div>
+                    <div class="col xxs-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3"><div class="block"><span></span></div></div>
+                  </div>
+                </div>
+              </section>
 
-                <div class='col xxs-4 s-2 l-5 xxs-OR-4 n-OL-6'><div class='block blue'>3<span></span></div></div>
-                <div class='col xxs-12 s-6 l-3 n-OR-6'><div class='block green'>4<span></span></div></div>
-                <div class='col xxs-6 s-12 l-4'><div class='block orange'>5<span></span></div></div>
+              <section>
+                <h4>Responsive. (Resize window)</h4>
+                <div class='grid gutters'>
+                  <div class='row'>
 
-                <div class='col xxs-6 s-4 l-3 n-OL-8'><div class='block gray'>6<span></span></div></div>
-                <div class='col xxs-12 s-4 l-3 n-OR-1'><div class='block pink'>7<span></span></div></div>
-                <div class='col xxs-12 s-1 l-3 n-OR-1'><div class='block purple'>8<span></span></div></div>
-                <div class='col xxs-6 s-1 l-3 n-OR-7'><div class='block'>9<span></span></div></div>
-                <div class='col xxs-6 s-2 l-3 n-OR-10'><div class='block black'>10<span></span></div></div>
-                <div class='col l-9'><div class='block cyan'>11<span></span></div></div>
+                    <div class="col xxs-6 s-6 l-12"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 s-6 l-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-6 s-6 l-6"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class='clear l'></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class='clear l'></div>
+                    <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
+                    <div class="col xxs-4 s-4 l-3"><div class="block"><span></span></div></div>
+                    <div class='clear l'></div>
+                    <div class="col xxs-2 s-2 l-4"><div class="block"><span></span></div></div>
+                    <div class='clear s l'></div>
+                    <div class="col l-8"><div class="block"><span></span></div></div>
 
-              </div>
-            </div>
-          </section>
-        </div>
-      </section>
+                  </div>
+                </div>
+              </section>
 
-      <!-- Show Hide -->
-      <section id='show-hide'>
-        <div class='container padding'>
-          <h2>Show/Hide</h2>
+              <section>
+                <h4>under-[some-gutter-width]. (Resize window)</h4>
+                <div class='grid gutters'>
+                  <div class='row d-2'>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear under-s'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear under-n'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear under-m'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear under-l'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                  </div>
+                </div>
+              </section>
 
-          <section>
-            <h4>Show. (Resize window)</h4>
-            <div class='grid gutters'>
-              <div class='row'>
+              <section>
+                <h4>above-[some-gutter-width]. (Resize window)</h4>
+                <div class='grid gutters'>
+                  <div class='row d-2'>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear above-s'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear above-n'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear above-m'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='clear above-l'></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                  </div>
+                </div>
+              </section>
 
-                <div class="col xxs-12 hide xxl-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 hide xl-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 hide l-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 hide m-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 hide n-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 hide s-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 hide xs-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 hide xxs-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 hide l-show"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 hide s-show"><div class="block"><span></span></div></div>
-
-              </div>
-            </div>
-          </section>
-
-          <section>
-            <h4>Hide. (Resize window)</h4>
-            <div class='grid gutters'>
-              <div class='row'>
-
-                <div class="col xxs-12 xxl-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 xl-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 l-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 m-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 n-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 s-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 xs-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 xxs-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 l-hide"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 s-hide"><div class="block"><span></span></div></div>
-
-              </div>
-            </div>
-          </section>
-
-        </div>
-      </section>
-
-      <!-- Clears-->
-      <section id='clear'>
-        <div class='container padding'>
-          <h2>Clear</h2>
-
-          <section>
-            <h4>Fixed.</h4>
-            <div class='grid gutters'>
-              <div class='row'>
-                <div class="col xxs-2"><div class="block"><span></span></div></div>
-                <div class="col xxs-2"><div class="block"><span></span></div></div>
-                <div class='clear xxs'></div>
-                <div class="col xxs-6"><div class="block"><span></span></div></div>
-                <div class='clear xxs'></div>
-                <div class="col xxs-4"><div class="block"><span></span></div></div>
-                <div class="col xxs-4"><div class="block"><span></span></div></div>
-                <div class='clear xxs'></div>
-                <div class="col xxs-4"><div class="block"><span></span></div></div>
-                <div class="col xxs-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-3"><div class="block"><span></span></div></div>
-                <div class='clear xxs'></div>
-                <div class="col xxs-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-3"><div class="block"><span></span></div></div>
-              </div>
             </div>
           </section>
 
-          <section>
-            <h4>Responsive. (Resize window)</h4>
-            <div class='grid gutters'>
-              <div class='row'>
+          <!-- Nesting -->
+          <section id='nesting'>
+            <div class='container padding'>
 
-                <div class="col xxs-6 s-6 l-12"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 s-6 l-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-6 s-6 l-6"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class='clear l'></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class='clear l'></div>
-                <div class="col xxs-3 s-3 l-3"><div class="block"><span></span></div></div>
-                <div class="col xxs-4 s-4 l-3"><div class="block"><span></span></div></div>
-                <div class='clear l'></div>
-                <div class="col xxs-2 s-2 l-4"><div class="block"><span></span></div></div>
-                <div class='clear s l'></div>
-                <div class="col l-8"><div class="block"><span></span></div></div>
+              <h2>Nesting tables</h2>
+              <br><br><br>
+              <section>
+                <div class='grid gutters'>
+                  <div class='row'>
+                    <div class='col s-4'>
 
-              </div>
+                      <div class='grid gutters'>
+                        <div class='row'>
+                          <div class='col xxs-3'><div class='block green'><span></span></div></div>
+                          <div class='col xxs-3'><div class='block green'><span></span></div></div>
+                          <div class='col xxs-3'><div class='block green'><span></span></div></div>
+                          <div class='col xxs-3'><div class='block green'><span></span></div></div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class='col s-8'>
+                      <div class='grid gutters'>
+                        <div class='row'>
+                          <div class='col s-6'>
+                            <div class='grid gutters'>
+                              <div class='row'>
+                                <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
+                                <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
+                                <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
+                                <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class='col s-6'>
+
+                            <div class='grid gutters'>
+                              <div class='row'>
+                                <div class='col s-6'>
+                                  <div class='grid gutters'>
+                                    <div class='row'>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                      <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class='col s-6'>
+                                  <div class='grid gutters'>
+                                    <div class='row'>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                      <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </div>
           </section>
 
-          <section>
-            <h4>under-[some-gutter-width]. (Resize window)</h4>
-            <div class='grid gutters'>
-              <div class='row d-2'>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear under-s'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear under-n'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear under-m'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear under-l'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-              </div>
-            </div>
-          </section>
+          <!-- Containers -->
+          <section id='container'>
 
-          <section>
-            <h4>above-[some-gutter-width]. (Resize window)</h4>
-            <div class='grid gutters'>
-              <div class='row d-2'>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear above-s'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear above-n'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear above-m'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='clear above-l'></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-              </div>
-            </div>
-          </section>
+            <section>
+              <div class='container padding clearfix'>
+                <h2>Container</h2>
+                <h4>Custom.</h4>
 
-        </div>
-      </section>
-
-      <!-- Nesting grid -->
-      <section id='nesting'>
-        <div class='container padding'>
-
-          <h2>Nesting grid</h2>
-          <section>
-            <div class='grid gutters'>
-              <div class='row'>
-                <div class='col s-4'>
+                <div class='custom-container'>
 
                   <div class='grid gutters'>
-                    <div class='row'>
-                      <div class='col xxs-3'><div class='block green'><span></span></div></div>
-                      <div class='col xxs-3'><div class='block green'><span></span></div></div>
-                      <div class='col xxs-3'><div class='block green'><span></span></div></div>
-                      <div class='col xxs-3'><div class='block green'><span></span></div></div>
+                    <div class='row d-4'>
+                      <div class='col'><div class='block'><span></span></div></div>
+                      <div class='col'><div class='block'><span></span></div></div>
+                      <div class='col'><div class='block'><span></span></div></div>
+                    </div>
+                    <div class='row d-4'>
+                      <div class='col'><div class='block'><span></span></div></div>
+                      <div class='col'><div class='block'><span></span></div></div>
+                      <div class='col'><div class='block'><span></span></div></div>
                     </div>
                   </div>
 
                 </div>
-                <div class='col s-8'>
-                  <div class='grid gutters'>
-                    <div class='row'>
-                      <div class='col s-6'>
-                        <div class='grid gutters'>
-                          <div class='row'>
-                            <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
-                            <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
-                            <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
-                            <div class='col xxs-2 s-6 m-4 l-12'><div class='block red'><span></span></div></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class='col s-6'>
 
-                        <div class='grid gutters'>
-                          <div class='row'>
-                            <div class='col s-6'>
-                              <div class='grid gutters'>
-                                <div class='row'>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                  <div class='col xxs-3 xs-4 s-6 m-4 l-6'><div class='block yellow'><span></span></div></div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class='col s-6'>
-                              <div class='grid gutters'>
-                                <div class='row'>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                  <div class='col xxs-2 s-6 m-4 l-4'><div class='block blue'><span></span></div></div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+              </div>
+            </section>
 
-                      </div>
-                    </div>
+            <section>
+              <div class='container padding-h'>
+                <h4>No container. 100% fluid.</h4>
+              </div>
+              <div class='spaced-d-x2'>
+                <div class='grid gutters'>
+                  <div class='row d-4'>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                  </div>
+                  <div class='row d-4'>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
+                    <div class='col'><div class='block'><span></span></div></div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </section>
 
         </div>
       </section>
-
-      <!-- Containers -->
-      <sectin id='container'>
-
-        <section>
-          <div class='container padding clearfix'>
-            <h2>Container</h2>
-            <h4>Custom.</h4>
-
-            <div class='custom-container'>
-
-              <div class='grid gutters'>
-                <div class='row d-4'>
-                  <div class='col'><div class='block'><span></span></div></div>
-                  <div class='col'><div class='block'><span></span></div></div>
-                  <div class='col'><div class='block'><span></span></div></div>
-                </div>
-                <div class='row d-4'>
-                  <div class='col'><div class='block'><span></span></div></div>
-                  <div class='col'><div class='block'><span></span></div></div>
-                  <div class='col'><div class='block'><span></span></div></div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-
-        <section>
-          <div class='container padding-h'>
-            <h4>No container. 100% fluid.</h4>
-          </div>
-          <div class='spaced-d-x2'>
-            <div class='grid gutters'>
-              <div class='row d-4'>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-              </div>
-              <div class='row d-4'>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-                <div class='col'><div class='block'><span></span></div></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-      </sectin>
 
 
       <!-- APIs -->
-<section id='APIs'>
-  <div class='container padding'>
-    <h1>APIs</h1>
+      <section id='APIs' class='section'>
 
-<h2>Basic setup</h2>
-<pre>
-<code><!-- Basic setup -->
-<div class='grid'>
-  <div class='row'>
-    <div class='col'></div>
-  </div>
-</div>
-</code>
-</pre>
+        <div class='section--header'>
+          <div class='container padding'>
+            <h1>APIs</h1>
+          </div>
+        </div>
+
+        <div class='section--main'>
+          <div class='container padding'>
 
 <h2>Defaults</h2>
-<pre>
-<code class='lang-css'>/* Grid */
+<pre><code class='lang-css'>/* Grid */
 .grid                /* start grid */
 .grid > .row         /* row        */
 .grid > .row > .col  /* column     */
@@ -912,12 +942,10 @@ xxl  /* width: 1600px  (Default) */
 .clear.always         /* visible min-width: 0       */
 .clear.above-[size]   /* visible only above [size]  */
 .clear.under-[size]   /* visible only under [size]  */
-</code>
-</pre>
+</code></pre>
 
 <h2>Gutters</h2>
-<pre>
-<code><!-- gutters -->
+<pre><code><!-- gutters -->
 <div class='grid gutters'>[...]</div>
 
 <!-- vertical -->
@@ -925,13 +953,10 @@ xxl  /* width: 1600px  (Default) */
 
 <!-- horizontal -->
 <div class='grid gutters-horizontal'>[...]</div>
-</code>
-</pre>
-
+</code></pre>
 
 <h2>Columns</h2>
-<pre>
-<code><!-- default width: 4 space width -->
+<pre><code><!-- default width: 4 space width -->
 <div class='row d-4'>
   <div class='col'></div>
   <div class='col'></div>
@@ -951,25 +976,19 @@ xxl  /* width: 1600px  (Default) */
   <div class='col xxs-OL-6'></div>
   <div class='col xxs-OR-6'></div>
 </div>
-</code>
-</pre>
+</code></pre>
 
 
 <h2>Show/Hide</h2>
-<pre>
-<code><!-- SHOW -->
+<pre><code><!-- SHOW -->
 <div class='col hide xxl-show'></div>
 
 <!-- HIDE -->
 <div class='col xxl-hide'></div>
-</code>
-</pre>
-
-
+</code></pre>
 
 <h2>Clear</h2>
-<pre>
-<code><!-- ALWAYS -->
+<pre><code><!-- ALWAYS -->
 <div class='clear always'></div>
 
 <!-- RESPONSIVE -->
@@ -980,14 +999,39 @@ xxl  /* width: 1600px  (Default) */
 
 <!-- ABOVE SOME SCREEN SIZE -->
 <div class='clear above-s'></div>
-</code>
-</pre>
+</code></pre>
+
+          </div>
+        </div>
+
+      </section>
+
+
+          <!-- APIs -->
+      <section id='use' class='section'>
+        <div class='section--header'>
+          <div class='container padding'>
+            <h1>USE IT NOW</h1>
+          </div>
+        </div>
+
+        <div class='section--main'>
+          <div class='container padding'>
+            <h2>Include css</h2>
+            <pre><code><link rel='stylesheet' type='text/css' href='wafflegrid.min.css' /></code></pre>
+
+<h2>Make your first grid</h2>
+<pre><code><!-- Basic setup -->
+<div class='grid'>
+  <div class='row'>
+    <div class='col'></div>
+  </div>
+</div>
+</code></pre>
 
 
 <h2>Private grid</h2>
-<pre>
-<code><!-- HTML -->
-
+<pre><code><!-- HTML -->
 <div id='your-id'>
 
   <div class='grid gutters'>
@@ -1000,28 +1044,18 @@ xxl  /* width: 1600px  (Default) */
 
 </div>
 </code>
-
-<code class='css'>// SASS
-
-// - Import WaffleGrid
-// ================================
-
-@import "wafflegrid.sass" // import WaffleGrid before your style!!
-
-
-// - Import WaffleGrid
-// ================================
+<code class='less'>// SASS: "_private.sass"
 
 #your-id          // Select your tag
   .grid           // Select the grid inside of the tag
     +grid(10px)   // set the unit (px, rem, em, %).
-</code>
+</code></pre>
 
-</pre>
+          </div>
+        </div>
 
+      </section>
 
-  </div>
-</section>
 
     </main>
 
