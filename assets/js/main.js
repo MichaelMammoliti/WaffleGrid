@@ -25,6 +25,8 @@ String.prototype.escape = function() {
 
 (function(){
 
+  hljs.initHighlightingOnLoad();
+
   $("pre code").not(".lang-css").each(function()
   {
     var $pre = $(this),
@@ -34,3 +36,4 @@ String.prototype.escape = function() {
   })
 
 }());
+

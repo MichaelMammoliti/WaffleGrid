@@ -9,17 +9,14 @@
   color: #888
   font-weight: 300
   font-family: "Open Sans"
+  outline: none
 
 html
-  font-size: 16px
+  font-size: 14px
 
 body
   font-size: 100%
   font-size: 1rem
-  background-image: url("../img/waffles.jpg")
-  background-attachment: fixed
-  background-size: cover
-  background-position: center center
   min-width: 300px
   width: 100%
 
@@ -38,7 +35,7 @@ a
 // Structure
 // ====================
 header
-  background: rgba($color, .84)
+  background: $color
   position: relative
 main
   background: #fff
@@ -50,6 +47,10 @@ footer
     width: 100%
     content: ""
     clear: both
+
+::selection
+  background: $color
+  color: #fff
 
 // Header
 // ====================
@@ -64,8 +65,6 @@ header
 
     #download-btn
       float: right
-      a
-        font-weight: 600
 
   nav
     display: table
@@ -77,28 +76,29 @@ header
       line-height: $line-height
       padding: 0 $line-height/2
       border-radius: $line-height
+      border: 2px solid transparent
       position: relative
       font-weight: 600
       color: #fff
       &:hover
         color: $color
         background: #fff
+        border-color: #fff
 
 // Footer
 // ====================
 
 footer
   .copyright
-    padding: 100px 0
-    background: rgba($color, .9)
+    background: $color
+    padding: $spacing*2 0
     p
       text-align: center
       padding: $spacing/2 $spacing
-      border-radius: $spacing*2
       background: #fff
+      border-radius: $spacing*2
       display: table
       margin: auto
-
 
 
 
@@ -120,7 +120,6 @@ footer
 
   *
     color: #fff
-    font-size: 3rem
     font-weight: 600
 
 // Metrics
@@ -156,6 +155,9 @@ footer
 // Sections
 // ====================
 .section
+  .section--header
+    .padding
+      padding-bottom: 0 !important
   .section--bg-image
   .section--bg-color
 
@@ -167,16 +169,22 @@ footer
   background: #fff
 
 
-
-
 // typography
 // ====================
 h1
-  font-size: 2.5rem
+  font-size: 2rem
+  letter-spacing: 3px
 h2
   font-size: 1.4rem
+  font-weight: 400
 h3
   font-size: 1.1rem
+
+h4
+  font-weight: 600
+  text-transform: uppercase
+  color: #666
+  font-size: 1rem
 
 .text
   &.link
@@ -196,6 +204,17 @@ h3
   line-height: $line-height
   padding: 0 $line-height/2
   border: 2px solid transparent
+  font-weight: 600
+  text-transform: uppercase
+  font-size: .9rem
+
+  &.stroke
+  &.fill
+  &.btn-colored
+    background: $color
+    color: #fff
+    &:hover
+      background: $color - 20
   &.btn-white
     color: $color
     &.stroke
@@ -206,11 +225,6 @@ h3
     &:hover
       background: #fff
       color: $color
-  &.fill
-    border: 4px solid $color
-  &.btn-colored
-    background: $color
-    color: #fff
 
 
 // sections
@@ -224,22 +238,18 @@ main
       padding: $spacing*2 $spacing
 section
   h1
-    margin-bottom: $spacing
+    margin-bottom: $spacing*2
     color: $color
-    padding: 0 0 $spacing/2
     text-align: left
     width: 100%
     display: block
-    font-weight: 600
     text-transform: uppercase
-  >h2
-    margin-top: $spacing
   h2
     margin-bottom: $spacing/2
-    color: #000
-    font-weight: 400
-
-  h3
+    color: #444
+  >h2
+    margin-top: $spacing
+  h4
     margin-top: $spacing
     margin-bottom: $spacing/4
 
@@ -319,8 +329,9 @@ section
       border-bottom: 8px solid #fff
 
   &:hover
-    background: #aaa
+    background: $color
     overflow: visible
+    box-shadow: 0 0 10px #aaa
     span
       opacity: 1
 
@@ -331,16 +342,49 @@ section
   .block
     color: #fff
 
+#some-magic
+  .nav
+    li
+      margin: 0 5px 5px 0
+
 
 #clear
   .clear
     height: 2px
     background: #aaa
 
+#why
+  p
+    margin: $spacing/2 0
+  h4
+    margin-top: 0
+
+#APIs
+  h2
+    margin-top: $spacing
+
 
 pre
   font-family: monospace !important
   *
     font-family: monospace !important
+
+.nav
+  &.inline-nav
+  &.h
+
+    li
+      float: left
+      &:last-of-type
+        margin-right: 0
+    a
+      line-height: $line-height
+      padding: 0 $line-height/2
+      display: block
+      background: #eee
+      &:hover
+        background: $color
+        color: #fff
+
 
 @import "_responsive.sass"
