@@ -1,3 +1,20 @@
+/*
+  # ----- File info:
+  - Author: Michael Mammoliti
+  - Name: WaffleGrid
+  - Version: 0.1
+  - js dipendencies: none
+  - Release date: 28 Feb 2016
+  - GitHub: https://github.com/MichaelMammoliti/wafflegrid
+
+  # ----- Contact info
+  - GitHub: https://github.com/MichaelMammoliti
+  - Mail: mammoliti.michael@gmail.com
+  - Twitter: @MichMammoliti
+
+  # ----- License Info
+  - Released under the MIT license.
+*/
 .grid { box-sizing: border-box; }
 .grid:before, .grid:after { content: " "; display: block; width: 100%; clear: both; }
 .grid.gutters { margin-left: -2rem; }
