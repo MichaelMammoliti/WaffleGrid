@@ -5,7 +5,7 @@ WaffleGrid is a CSS only grid system.
 - pixel perfect
 - show/hide cloumns
 - column ordering
-- personal unit (px, rem, em, &)
+- personal unit (px, rem, em, %)
 - private gutters width
 - gutters: horizontal only, vertical only, no gutters, all gutters.
 - no fixed or responsive containers needed anymore
